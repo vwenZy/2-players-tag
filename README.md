@@ -1,3 +1,5 @@
 # hungry_animal
  
-- Elephant chaing Apple (or vice versa)
+- Pokemon chasing Pokemon
+
+* How to resize Pikachu when got sizeUp plant.
