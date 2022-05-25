@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=bonusForElephant
+comment0.text=\n\ The\ Pokemon\ I\ don't\ know\ the\ name.\n\ \n\ @author\ Zhang\n\ @version\ May\ 25\n
+comment1.params=
+comment1.target=bonusForElephant()
+comment1.text=\n\ Constructor\ -\ The\ code\ that\ gets\ run\ one\ time\ when\ object\ is\ created.\n
+comment2.params=
+comment2.target=void\ animateElephant()
+comment3.params=
+comment3.target=void\ act()
+numComments=4

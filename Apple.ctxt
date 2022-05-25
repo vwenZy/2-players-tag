@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Apple
+comment0.text=\n\ The\ Pikachu.\n\ \n\ @author\ Zhang\n\ @version\ May\ 25\n
+comment1.params=
+comment1.target=Apple()
+comment1.text=\n\ Constructor\ -\ The\ code\ that\ gets\ run\ one\ time\ when\ object\ is\ created.\n
+comment2.params=
+comment2.target=void\ animateElephant()
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=void\ eat()
+comment5.params=
+comment5.target=void\ getSize()
+numComments=6

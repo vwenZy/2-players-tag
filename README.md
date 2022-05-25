@@ -1,1 +1,3 @@
-Haha, apple eating pokemon :]
+# hungry_animal
+ 
+- Elephant chaing Apple (or vice versa)
