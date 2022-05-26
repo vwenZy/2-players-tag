@@ -16,7 +16,7 @@ public class MyWorld extends World
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(600, 400, 1);
+        super(600, 330, 1);
         
         Elephant e = new Elephant();
         addObject(e, 300, 350);
@@ -36,6 +36,12 @@ public class MyWorld extends World
         addObject(elephant, x, y);
     }
     
+    /*public void spawnPower()
+    {
+        Power attack = new Power();
+        addObject(attack, Apple.getCoorX(), Apple.getCoorY());
+    }*/
+    
     public void increaseScore()
     {
         score++;
@@ -44,9 +50,9 @@ public class MyWorld extends World
             bonusForElephant xiaozhi = new bonusForElephant();
             addObject(xiaozhi, Greenfoot.getRandomNumber(580), Greenfoot.getRandomNumber(580));
         }
-        if(score % 13 == 0) {
-            bonusForApple plant = new bonusForApple();
-            addObject(plant, Greenfoot.getRandomNumber(580), Greenfoot.getRandomNumber(580));
+        if(score % 5 == 0) {
+            bonusForApple cabbage = new bonusForApple();
+            addObject(cabbage, Greenfoot.getRandomNumber(580), Greenfoot.getRandomNumber(580));
         }
     }
     

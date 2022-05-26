@@ -8,6 +8,7 @@ comment2.params=
 comment2.target=void\ spawnApple()
 comment3.params=
 comment3.target=void\ increaseScore()
+comment3.text=public\ void\ spawnPower()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ Power\ attack\ \=\ new\ Power();\n\ \ \ \ \ \ \ \ addObject(attack,\ Apple.getCoorX(),\ Apple.getCoorY());\n}
 comment4.params=
 comment4.target=int\ getScore()
 numComments=5

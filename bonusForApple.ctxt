@@ -1,7 +1,11 @@
 #BlueJ class context
 comment0.target=bonusForApple
-comment0.text=\n\ The\ Pokemon\ I\ don't\ know\ the\ name.\n\ \n\ @author\ Zhang\n\ @version\ May\ 25\n
+comment0.text=\n\ The\ Pokemon\ I\ don't\ know\ the\ name.\n\ \n\ @author\ Zhang\n\ @version\ May\ 26\n
 comment1.params=
-comment1.target=void\ act()
-comment1.text=\n\ Act\ -\ do\ whatever\ the\ Elephant\ wants\ to\ do.\ This\ method\ is\ called\ whenever\n\ the\ 'Act'\ or\ 'Run'\ button\ gets\ pressed\ in\ the\ environment.\n
-numComments=2
+comment1.target=bonusForApple()
+comment1.text=\n\ Constructor\ -\ The\ code\ that\ gets\ run\ one\ time\ when\ object\ is\ created.\n
+comment2.params=
+comment2.target=void\ animateElephant()
+comment3.params=
+comment3.target=void\ act()
+numComments=4

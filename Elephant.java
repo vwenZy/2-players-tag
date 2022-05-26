@@ -30,14 +30,14 @@ public class Elephant extends Actor
         for(int i = 0; i < idleRight.length; i++)
         {
             idleRight[i] = new GreenfootImage("images/pokemon/idle" + i + ".png");
-            idleRight[i].scale(30, 30);
+            idleRight[i].scale(45, 45);
         }
         
         for(int i = 0; i < idleLeft.length; i++)
         {
             idleLeft[i] = new GreenfootImage("images/pokemon/idle" + i + ".png");
             idleLeft[i].mirrorHorizontally();
-            idleLeft[i].scale(30, 30);
+            idleLeft[i].scale(45, 45);
         }
         
         animationTimer.mark();
@@ -83,6 +83,7 @@ public class Elephant extends Actor
             setLocation(getX(), getY() - speed);
         }
         
+        // Eat xiaozhi.
         getSpeed();
         
         // Animate the elephant.
@@ -91,7 +92,7 @@ public class Elephant extends Actor
     
     public void getSpeed()
     {
-        // check if elephant is touching apple
+        // check if elephant - pokemon is touching xiaozhi
         if(isTouching(bonusForElephant.class)) {
             removeTouching(bonusForElephant.class);
             MyWorld world = (MyWorld) getWorld();

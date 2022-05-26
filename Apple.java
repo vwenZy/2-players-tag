@@ -13,7 +13,7 @@ public class Apple extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
-    int size = 50;
+    public static int size = 70;
     
     // GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
     GreenfootImage[] runRight = new GreenfootImage[4];
@@ -30,14 +30,14 @@ public class Apple extends Actor
         for(int i = 0; i < runRight.length; i++)
         {
             runRight[i] = new GreenfootImage("images/pikachu/run" + i + ".png");
-            runRight[i].scale(50, 50);
+            runRight[i].scale(size, size);
         }
         
         for(int i = 0; i < runLeft.length; i++)
         {
             runLeft[i] = new GreenfootImage("images/pikachu/run" + i + ".png");
             runLeft[i].mirrorHorizontally();
-            runLeft[i].scale(50, 50);
+            runLeft[i].scale(size, size);
         }
         
         animationTimer.mark();
@@ -83,7 +83,11 @@ public class Apple extends Actor
             setLocation(getX(), getY() - 5);
         }
         
+        // Eat elephant - pokemon
         eat();
+        
+        // Eat cabbage
+        // getSize();
         
         // Animate the elephant.
         animateElephant();
@@ -91,7 +95,7 @@ public class Apple extends Actor
     
     public void eat()
     {
-        // check if elephant is touching apple
+        // check if apple is touching elephant
         if(isTouching(Elephant.class)) {
             removeTouching(Elephant.class);
             MyWorld world = (MyWorld) getWorld();
@@ -101,14 +105,13 @@ public class Apple extends Actor
         }
     }
 
-    public void getSize()
+    /*public void getSize()
     {
-        // check if elephant is touching apple
+        // check if apple - pikachu is touching cabbage
         if(isTouching(bonusForApple.class)) {
             removeTouching(bonusForApple.class);
             MyWorld world = (MyWorld) getWorld();
-            runRight[0].scale(size += 10, size += 10);
-            runLeft[0].scale(size += 10, size += 10);
+            world.spawnPower();
         }
-    }
+    }*/
 }
