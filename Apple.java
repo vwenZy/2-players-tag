@@ -14,6 +14,7 @@ public class Apple extends Actor
      */
     
     public static int size = 70;
+    public static int speed = 3;
     
     // GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
     GreenfootImage[] runRight = new GreenfootImage[4];
@@ -69,25 +70,25 @@ public class Apple extends Actor
     {
         // Add your action code here.
         if(Greenfoot.isKeyDown("a")) {
-            move(-5);
+            move(-speed);
             facing = "left";
         }
         if(Greenfoot.isKeyDown("d")) {
-            move(5);
+            move(speed);
             facing = "right";
         }
         if(Greenfoot.isKeyDown("s")) {
-            setLocation(getX(), getY() + 5);
+            setLocation(getX(), getY() + speed);
         }
         if(Greenfoot.isKeyDown("w")) {
-            setLocation(getX(), getY() - 5);
+            setLocation(getX(), getY() - speed);
         }
         
         // Eat elephant - pokemon
         eat();
         
-        // Eat cabbage
-        // getSize();
+        // Eat xiaozhi.
+        getSpeed();
         
         // Animate the elephant.
         animateElephant();
@@ -114,4 +115,20 @@ public class Apple extends Actor
             world.spawnPower();
         }
     }*/
+
+    public void getSpeed()
+    {
+        // check if elephant - pokemon is touching xiaozhi
+        if(isTouching(bonusForElephant.class)) {
+            removeTouching(bonusForElephant.class);
+            MyWorld world = (MyWorld) getWorld();
+            speed += 3;
+            world.increaseAppleSpeed();
+        }
+    }
+    
+    public static int getSpd()
+    {
+        return speed;
+    }
 }

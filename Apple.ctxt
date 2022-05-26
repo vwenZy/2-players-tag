@@ -10,4 +10,9 @@ comment3.params=
 comment3.target=void\ act()
 comment4.params=
 comment4.target=void\ eat()
-numComments=5
+comment5.params=
+comment5.target=void\ getSpeed()
+comment5.text=public\ void\ getSize()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ //\ check\ if\ apple\ -\ pikachu\ is\ touching\ cabbage\n\ \ \ \ \ \ \ \ if(isTouching(bonusForApple.class))\ {\n\ \ \ \ \ \ \ \ \ \ \ \ removeTouching(bonusForApple.class);\n\ \ \ \ \ \ \ \ \ \ \ \ MyWorld\ world\ \=\ (MyWorld)\ getWorld();\n\ \ \ \ \ \ \ \ \ \ \ \ world.spawnPower();\n\ \ \ \ \ \ \ \ }\n}
+comment6.params=
+comment6.target=int\ getSpd()
+numComments=7

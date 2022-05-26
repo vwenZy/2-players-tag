@@ -27,7 +27,7 @@ public class bonusForElephant extends Actor
         for(int i = 0; i < award.length; i++)
         {
             award[i] = new GreenfootImage("images/xiaozhi/award" + i + ".png");
-            award[i].scale(25, 25);
+            award[i].scale(30, 30);
         }
         
         animationTimer.mark();

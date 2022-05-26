@@ -13,6 +13,7 @@ public class Elephant extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     
+    public static int size = 45;
     public static int speed = 3;
     
     // GreenfootSound elephantSound = new GreenfootSound("elephantcub.mp3");
@@ -30,14 +31,14 @@ public class Elephant extends Actor
         for(int i = 0; i < idleRight.length; i++)
         {
             idleRight[i] = new GreenfootImage("images/pokemon/idle" + i + ".png");
-            idleRight[i].scale(45, 45);
+            idleRight[i].scale(size, size);
         }
         
         for(int i = 0; i < idleLeft.length; i++)
         {
             idleLeft[i] = new GreenfootImage("images/pokemon/idle" + i + ".png");
             idleLeft[i].mirrorHorizontally();
-            idleLeft[i].scale(45, 45);
+            idleLeft[i].scale(size, size);
         }
         
         animationTimer.mark();
@@ -97,6 +98,12 @@ public class Elephant extends Actor
             removeTouching(bonusForElephant.class);
             MyWorld world = (MyWorld) getWorld();
             speed += 3;
+            world.increaseElephantSpeed();
         }
+    }
+    
+    public static int getSpd()
+    {
+        return speed;
     }
 }
