@@ -47,5 +47,8 @@ public class TitleScreen extends World
         
         Apple apple = new Apple();
         addObject(apple, 100, 200);
+        
+        Description description = new Description();
+        addObject(description, 560, 290);
     }
 }
