@@ -62,6 +62,10 @@ public class MyWorld extends World
             GameOver gameOverWorld = new GameOver();
             Greenfoot.setWorld(gameOverWorld);
         }
+        if(score % 4 == 0) {
+            Bomb bomb = new Bomb();
+            addObject(bomb, Greenfoot.getRandomNumber(580), 0);
+        }
     }
     
     public void increaseAppleSpeed()

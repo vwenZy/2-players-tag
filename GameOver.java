@@ -3,8 +3,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 /**
  * Write a description of class GameOver here.
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Zhang
+ * @version May 30
  */
 public class GameOver extends World
 {
@@ -19,5 +19,8 @@ public class GameOver extends World
         super(600, 330, 1);
         
         addObject(titleLabel, getWidth()/2, 100);
+        
+        Return back = new Return();
+        addObject(back, 560, 297);
     }
 }

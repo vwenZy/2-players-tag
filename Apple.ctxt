@@ -14,5 +14,7 @@ comment5.params=
 comment5.target=void\ getSpeed()
 comment5.text=public\ void\ getSize()\n\ \ \ \ {\n\ \ \ \ \ \ \ \ //\ check\ if\ apple\ -\ pikachu\ is\ touching\ cabbage\n\ \ \ \ \ \ \ \ if(isTouching(bonusForApple.class))\ {\n\ \ \ \ \ \ \ \ \ \ \ \ removeTouching(bonusForApple.class);\n\ \ \ \ \ \ \ \ \ \ \ \ MyWorld\ world\ \=\ (MyWorld)\ getWorld();\n\ \ \ \ \ \ \ \ \ \ \ \ world.spawnPower();\n\ \ \ \ \ \ \ \ }\n}
 comment6.params=
-comment6.target=int\ getSpd()
-numComments=7
+comment6.target=void\ getBomb()
+comment7.params=
+comment7.target=int\ getSpd()
+numComments=8

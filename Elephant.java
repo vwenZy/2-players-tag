@@ -87,6 +87,9 @@ public class Elephant extends Actor
         // Eat xiaozhi.
         getSpeed();
         
+        // Game Over when touches the bomb.
+        getBomb();
+        
         // Animate the elephant.
         animateElephant();
     }
@@ -102,8 +105,17 @@ public class Elephant extends Actor
         }
     }
     
+    public void getBomb()
+    {
+        if(isTouching(Bomb.class)) {
+            GameOver gameOverWorld = new GameOver();
+            Greenfoot.setWorld(gameOverWorld);
+            System.out.println("The runner touches your bomb.");
+        }
+    }
+    
     public static int getSpd()
     {
-        return speed;
+       return speed;
     }
 }

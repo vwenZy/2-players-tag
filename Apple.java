@@ -90,6 +90,9 @@ public class Apple extends Actor
         // Eat xiaozhi.
         getSpeed();
         
+        //Game Over when touches the bomb.
+        getBomb();
+        
         // Animate the elephant.
         animateElephant();
     }
@@ -124,6 +127,15 @@ public class Apple extends Actor
             MyWorld world = (MyWorld) getWorld();
             speed += 3;
             world.increaseAppleSpeed();
+        }
+    }
+    
+    public void getBomb()
+    {
+        if(isTouching(Bomb.class)) {
+            GameOver gameOverWorld = new GameOver();
+            Greenfoot.setWorld(gameOverWorld);
+            System.out.println("The chaser touches your bomb.");
         }
     }
     
