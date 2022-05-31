@@ -23,7 +23,7 @@ public class Bomb extends Actor
     public Bomb()
     {
         GreenfootImage img = new GreenfootImage("bomb.png");
-        img.scale(img.getWidth()/7, img.getHeight()/7);
+        img.scale(img.getWidth()/9, img.getHeight()/9);
         setImage(img);
     }
 }

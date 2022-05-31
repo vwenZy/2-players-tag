@@ -50,8 +50,8 @@ public class MyWorld extends World
     public void spawnApple()
     {
         int x = Greenfoot.getRandomNumber(580);
-        int y = Greenfoot.getRandomNumber(320);
-        Greenfoot.delay(50);
+        int y = Greenfoot.getRandomNumber(300);
+        Greenfoot.delay(40);
         Elephant elephant = new Elephant();
         addObject(elephant, x, y);
     }
