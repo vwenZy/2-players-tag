@@ -9,6 +9,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class GameOver extends World
 {
     Label titleLabel = new Label("Game Over", 50);
+    Label timeLabel = new Label("Chaser survived: " + MyWorld.getGameTime() + " seconds.", 35);
+    public static Label isBomb = new Label(0, 30);
     /**
      * Constructor for objects of class GameOver.
      * 
@@ -22,5 +24,9 @@ public class GameOver extends World
         
         Return back = new Return();
         addObject(back, 560, 297);
+        
+        addObject(timeLabel, getWidth()/2, 200);
+        
+        addObject(isBomb, getWidth()/2, 250);
     }
 }

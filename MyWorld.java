@@ -9,21 +9,24 @@ public class MyWorld extends World
     Label scoreLabel;
     Label appleSpeedLabel;
     Label elephantSpeedLabel;
+    Label timeLabel;
     
-    SimpleTimer spawnTime = new SimpleTimer();
+    public static SimpleTimer gameTime = new SimpleTimer();
     /**
-     * Constructor for objects of class MyWorld.
-     * 
-     */
+    * Constructor for objects of class MyWorld.
+    * 
+    */
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 330, 1);
         
+        gameTime.mark();
+        
         // Create a score label.
         scoreLabel = new Label(0, 50);
         addObject(scoreLabel, 65, 40);
-
+    
         // Create an apple speed label.
         appleSpeedLabel = new Label(0, 25);
         addObject(appleSpeedLabel, 450, 40);
@@ -31,6 +34,9 @@ public class MyWorld extends World
         // Create an elephant speed label.
         elephantSpeedLabel = new Label(0, 25);
         addObject(elephantSpeedLabel, 450, 80);
+        
+        timeLabel = new Label(0, 20);
+        addObject(timeLabel, 130, 300);
         
         Elephant e = new Elephant();
         addObject(e, 300, 350);
@@ -58,6 +64,9 @@ public class MyWorld extends World
             bonusForElephant xiaozhi = new bonusForElephant();
             addObject(xiaozhi, Greenfoot.getRandomNumber(580), Greenfoot.getRandomNumber(320));
         }
+        if(score % 1 == 0) {
+            timeLabel.setValue("Survived " + gameTime.millisElapsed()/1000 + " seconds.");
+        }
         if(score == 32) {
             GameOver gameOverWorld = new GameOver();
             Greenfoot.setWorld(gameOverWorld);
@@ -76,5 +85,10 @@ public class MyWorld extends World
     public void increaseElephantSpeed()
     {
         elephantSpeedLabel.setValue("Runner Speed: " + Elephant.getSpd());
+    }
+    
+    public static int getGameTime()
+    {
+        return gameTime.millisElapsed()/1000;
     }
 }

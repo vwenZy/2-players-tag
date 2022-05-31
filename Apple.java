@@ -135,7 +135,7 @@ public class Apple extends Actor
         if(isTouching(Bomb.class)) {
             GameOver gameOverWorld = new GameOver();
             Greenfoot.setWorld(gameOverWorld);
-            System.out.println("The chaser touches your bomb.");
+            GameOver.isBomb.setValue("The chaser touches the bomb.");
         }
     }
     
